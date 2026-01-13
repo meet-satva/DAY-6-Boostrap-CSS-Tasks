@@ -17,10 +17,10 @@
                     
                     <div class="row g-2">
                         <div class="col-sm-6">
-                            <input type="text" class="form-control mb-3" placeholder="First name" required>
+                            <input type="text" class="form-control mb-3" placeholder="First name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control mb-3" placeholder="Last name" required>
+                            <input type="text" class="form-control mb-3" placeholder="Last name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
                         </div>
                     </div>
     

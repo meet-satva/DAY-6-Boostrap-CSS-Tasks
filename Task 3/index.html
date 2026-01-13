@@ -31,11 +31,11 @@
     
             <div class="col-md-6">
                 <label for="fname" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="fname" required>
+                <input type="text" class="form-control" id="fname" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
             </div>
             <div class="col-md-6">  
                 <label for="lname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" required>
+                <input type="text" class="form-control" id="lname" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
             </div>
         
             <div class="col-md-4">
@@ -53,7 +53,8 @@
             </div>
             <div class="col-md-4">
                 <label for="number" class="form-label">Mobile Number</label>
-                <input type="number" class="form-control" id="number" pattern="\d{10}" required>
+                <input type="number" class="form-control" id="number" pattern="^\d{10}$" required>
+                <div class="invalid-feedback text-start">Invalid number</div>
             </div>
             
             <div class="col-12">    
