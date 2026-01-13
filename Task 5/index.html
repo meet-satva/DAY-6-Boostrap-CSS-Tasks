@@ -39,8 +39,8 @@
     
                 <div class="col-md-12">
                     <label for="email" class="form-label fw-bold">UNCC Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="example@uncc.edu" required>
-                    <div class="invalid-feedback">Please enter a valid UNCC email.</div>
+                    <input type="email" class="form-control" id="email" placeholder="Enter UNCC Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                    <div class="invalid-feedback">Invalid UNCC email.</div>
                 </div>
     
                 <div class="col-md-12">
@@ -57,7 +57,7 @@
                 <div class="col-md-12">
                     <label for="tutor" class="form-label fw-bold">Name of Preferred Tutor</label>
                     <select class="form-select" id="tutor" required>
-                        <option selected>Anyone Available</option>
+                        <option selected>Meet</option>
                         <option>Rahul</option>
                         <option>Soniya</option>
                     </select>
@@ -104,6 +104,7 @@
            document.querySelector(".ap-form").style.display = "block";
            document.querySelector(".open-div").style.display = "none";
        });
+
         })()
     </script>
         
