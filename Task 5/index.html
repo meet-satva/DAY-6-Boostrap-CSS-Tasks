@@ -105,6 +105,28 @@
            document.querySelector(".open-div").style.display = "none";
        });
 
+       const timeInput = document.getElementById('time');
+    const now = new Date();
+
+
+    now.setMinutes(now.getMinutes() + 1);
+
+ 
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const minTime = `${hours}:${minutes}`;
+
+   
+    timeInput.setAttribute('min', minTime);
+
+   
+    timeInput.addEventListener('input', function() {
+        if (this.value && this.value <= minTime) {
+            alert("Please select a time later than the current time.");
+            this.value = ''; 
+        }
+    });
+
         })()
     </script>
         
